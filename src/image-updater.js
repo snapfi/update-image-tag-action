@@ -13,7 +13,7 @@ async function updateImageTag(newImageTag, repository_name) {
     const folderPath= `dev/xpto-api/`
     const key = "newTag"
 
-    yamlChanger.insertYamlValue(folderPath, key, newImageTag)
+    yamlChanger.insertYamlValue(folderPath, newImageTag)
 }
 
 async function commitNewImageTag(newImageTag, actor) {
