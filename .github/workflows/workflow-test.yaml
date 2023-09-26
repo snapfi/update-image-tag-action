@@ -1,5 +1,12 @@
 name: Test
-      
+on:
+  workflow_dispatch:
+    inputs:
+      test:
+        type: string
+        requirement: false
+        description: 'Service name'      
+
 permissions:
   id-token: write
   contents: write
@@ -16,4 +23,4 @@ jobs:
 
       - name: Self Test
         id: selftest
-        uses: snapfi/update-image-tag-action.git@main
+        uses: snapfi/update-image-tag-action@main
