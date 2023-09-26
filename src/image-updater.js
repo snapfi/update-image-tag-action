@@ -10,8 +10,8 @@ async function updateImageTag(newImageTag, repository_name) {
     
     // filePath= `${environment}/${repository_name}/deployment.yaml`
     
-    filePath= `dev/xpto-api/deployment.yaml`
-    key = "newTag"
+    const filePath= `dev/xpto-api/deployment.yaml`
+    const key = "newTag"
 
     }
     yamlChanger.insertYamlValue(filePath, key, newImageTag)
