@@ -8,12 +8,12 @@ async function updateImageTag(newImageTag, repository_name) {
     //Verificar se tem  arquivo deployment, tem deployment? então é deployment se não é cronjob.
 
     
-    // filePath= `${environment}/${repository_name}/deployment.yaml`
+    // folderPath= `${environment}/${repository_name}/deployment.yaml`
     
-    const filePath= `dev/xpto-api/deployment.yaml`
+    const folderPath= `dev/xpto-api/`
     const key = "newTag"
 
-    yamlChanger.insertYamlValue(filePath, key, newImageTag)
+    yamlChanger.insertYamlValue(folderPath, key, newImageTag)
 }
 
 async function commitNewImageTag(newImageTag, actor) {
