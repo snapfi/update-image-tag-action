@@ -6,7 +6,7 @@ permissions:
   actions: write
 
 jobs:
-  add-to-service-catalog:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Infra Code
