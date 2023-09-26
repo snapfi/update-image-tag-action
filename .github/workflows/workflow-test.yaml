@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: snapfi/paulo-test
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Self Test
         id: selftest
