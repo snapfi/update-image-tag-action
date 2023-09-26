@@ -82,4 +82,4 @@ function insertYamlValue(folderPath, newImageTag) {
   }
 }
 
-module.exports = insertYamlValue;
+module.exports = { insertYamlValue };
