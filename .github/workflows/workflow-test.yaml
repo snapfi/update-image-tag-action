@@ -1,0 +1,19 @@
+name: Test
+      
+permissions:
+  id-token: write
+  contents: write
+  actions: write
+
+jobs:
+  add-to-service-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Infra Code
+        uses: actions/checkout@v3
+        with:
+          repository: snapfi/paulo-test
+
+      - name: Self Test
+        id: selftest
+        uses: snapfi/update-image-tag-action.git@main

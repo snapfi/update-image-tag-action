@@ -1,0 +1,9 @@
+{
+  "name": "update-image-tag-action",
+  "version": "1.0.0",
+  "description": "This action is used to update the image tag",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
