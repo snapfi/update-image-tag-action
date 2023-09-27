@@ -22,8 +22,8 @@ jobs:
       - name: Checkout Infra Code
         uses: actions/checkout@v3
         with:
-          repository: snapfi/paulo-test
-          #repository: snapfi/paulo-test # TODO - snapfi/k8s
+          # repository: snapfi/paulo-test
+          repository: snapfi/k8s
           token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Deploy 
