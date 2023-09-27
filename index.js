@@ -7,8 +7,7 @@ var githubSHA = process.env.GITHUB_SHA
 var githubActor = process.env.GITHUB_ACTOR
 var githubRepository = process.env.GITHUB_REPOSITORY
 
-var repositoryName = githubRepository.split("/")[1]
-
+var repositoryName = githubRepository.replace(/\//g, "")
 
 async function main() {
     try {
