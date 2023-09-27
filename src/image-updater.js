@@ -1,18 +1,18 @@
 const yamlChanger = require("./utils/yaml-changer")
 const gitHandler = require("./utils/git-handler")
 
-async function updateImageTag(newImageTag, repository_name) {
+async function updateImageTag(newImageTag, repository_name, environment) {
     
     console.info("[Info]:: Running the image update")
     
-    const folderPath= `dev/xpto-api/`
+    const folderPath= `${environment}/${repository_name}/`
 
     yamlChanger.insertYamlValue(folderPath, newImageTag)
 }
 
 async function commitNewImageTag(newImageTag, actor) {
     gitHandler.commit(
-        `test`
+        `Deploy - Repository:${repository_name} Environment: ${environment}`
     )
     gitHandler.push()
 }

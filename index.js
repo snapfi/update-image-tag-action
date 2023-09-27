@@ -9,8 +9,9 @@ var githubRepository = process.env.GITHUB_REPOSITORY
 
 async function main() {
     try {
-        
-        await imageUpdater.updateImageTag(githubSHA, githubRepository)
+        const environment = core.getInput("environment").toString()
+
+        await imageUpdater.updateImageTag(githubSHA, githubRepository, environment)
         await imageUpdater.commitNewImageTag(githubSHA, githubActor)
 
     } catch (error) {
