@@ -14,7 +14,7 @@ async function main() {
         const environment = core.getInput("environment").toString()
 
         await imageUpdater.updateImageTag(githubSHA, repositoryName, environment)
-        await imageUpdater.commitNewImageTag(githubSHA, githubActor, repositoryName)
+        await imageUpdater.commitNewImageTag(githubSHA, githubActor, repositoryName, environment)
 
     } catch (error) {
         throw Error(error)

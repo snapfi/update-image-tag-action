@@ -10,7 +10,7 @@ async function updateImageTag(newImageTag, repository_name, environment) {
     yamlChanger.insertYamlValue(folderPath, newImageTag)
 }
 
-async function commitNewImageTag(newImageTag, actor, repository_name) {
+async function commitNewImageTag(newImageTag, actor, repository_name, environment) {
     gitHandler.commit(
         `Deploy - Repository:${repository_name} Environment: ${environment}`
     )
