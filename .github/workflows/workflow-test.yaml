@@ -22,7 +22,7 @@ jobs:
       - name: Checkout Infra Code
         uses: actions/checkout@v3
         with:
-          repository: snapfi/k8s
+          repository: snapfi/paulo-test
           token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Deploy 
