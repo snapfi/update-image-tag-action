@@ -30,17 +30,24 @@ jobs:
           environment: dev
 
   approval:
-    if: success() && github.event_name == 'push'
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
-    - name: Approval
+    - name: Manual Approval
       id: approval
-      run: echo "Please approve the deployment to production"
+      run: |
+        # Use o comando `read` para aguardar uma aprovação manual
+        echo "Please approve the deployment to production"
+        echo "::set-output name=approved::true"
 
   deploy-prod:
     runs-on: ubuntu-latest
     needs: approval
     steps:
+      - name: Check Approval Status
+        id: check-approval
+        run: echo "Approval status is ${{ needs.manual-approval.outputs.approved }}"
+          
       - name: Deploy to Prod
         id: selftest
         uses: snapfi/update-image-tag-action@main
