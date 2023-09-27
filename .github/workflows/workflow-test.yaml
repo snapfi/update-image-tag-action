@@ -25,6 +25,6 @@ jobs:
           repository: snapfi/k8s
           token: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Deploy to ${{ inputs.environment }}
-        id: Deploy to Deploy to ${{ inputs.environment }}
+      - name: Deploy 
+        id: Deploy 
         uses: snapfi/update-image-tag-action@main
