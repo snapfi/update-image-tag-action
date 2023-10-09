@@ -3,6 +3,7 @@ description: "This action is used to update the image tag"
 inputs:
   environment:
     description: "Environment to execute"
+    default: "dev"    
     required: false
 runs:
   using: "node16"
