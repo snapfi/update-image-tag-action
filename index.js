@@ -11,13 +11,13 @@ var repositoryName = githubRepository.split("/")[1]
 
 async function main() {
     try {
-        const environment = core.getInput("environment").toString()
+        var environment = core.getInput("environment").toString()
         console.info("environment: " + environment)
 
         environment = environment ? "" : "dev";
 
         console.info("environment: " + environment)
-        
+
         await imageUpdater.updateImageTag(githubSHA, repositoryName, environment)
         await imageUpdater.commitNewImageTag(githubSHA, githubActor, repositoryName, environment)
 
