@@ -5,7 +5,7 @@ async function updateImageTag(newImageTag, repository_name, environment) {
     
     console.info("[Info]:: Running the image update")
     
-    const folderPath= `${environment}/${repository_name}/`
+    const folderPath= `manifests/apps/${environment}/${repository_name}/`
 
     yamlChanger.insertYamlValue(folderPath, newImageTag)
 }
