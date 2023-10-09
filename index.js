@@ -14,7 +14,9 @@ async function main() {
         var environment = core.getInput("environment").toString()
         console.info("environment: " + environment)
 
-        environment = environment ? "" : "dev";
+        if (environment == "") {
+            environment = "dev";
+        }
 
         console.info("environment: " + environment)
 
