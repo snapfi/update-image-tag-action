@@ -5,6 +5,9 @@ inputs:
     description: "Environment to execute"
     default: "dev"    
     required: true
+  tag:
+    description: "tag to deploy"   
+    required: true    
 runs:
   using: "node16"
   main: "index.js"
