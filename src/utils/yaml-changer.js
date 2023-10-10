@@ -15,7 +15,7 @@ function getResourceNameFromFilename(filePath) {
 
 function insertYamlValue(folderPath, newImageTag) {
   if (!folderPath || !newImageTag) {
-    console.error('Please provide a folder path and a new image tag as arguments.');
+    console.error("Please provide a folder path and a new image tag as arguments - folder path: " + folderPath + " tag: " + tag);
     process.exit(1);
   }
 
