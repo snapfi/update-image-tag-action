@@ -1,8 +1,8 @@
 const shell = require("shelljs")
 
 const commit = (commitMessage) => {
-    shell.exec('git config --global user.name "paulomalem"')
-    shell.exec('git config --global user.email "paulomalem@gmail.com"')
+    shell.exec('git config --global user.name "devops"')
+    shell.exec('git config --global user.email "devops@snap.fi"')
 
     shell.exec(`git add .`)
     shell.exec(`git commit -m "${commitMessage}"`)
