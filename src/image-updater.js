@@ -12,7 +12,7 @@ async function updateImageTag(newImageTag, repository_name, environment) {
 
 async function commitNewImageTag(newImageTag, actor, repository_name, environment) {
     gitHandler.commit(
-        `Deploy - Repository:${repository_name} Environment: ${environment}`
+        `Deploy - Repository:${repository_name} Environment: ${environment} - Tag: ${newImageTag}`
     )
     gitHandler.push()
 }
